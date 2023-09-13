@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct StateModel: Codable {
+    var available: Int?
+    var collectionURI: String?
+    var items: [ItemModel]?
+    var returned: Int?
+}

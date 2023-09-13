@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+struct ThumbnailModel: Codable {
+    var path: String?
+    var ext: String?
+    
+    private enum CodingKeys: String, CodingKey {
+        case path = "path"
+        case ext = "extension"
+    }
+}

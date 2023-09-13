@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct CharacterUrlModel: Codable {
+    var type: String?
+    var url: String?
+}

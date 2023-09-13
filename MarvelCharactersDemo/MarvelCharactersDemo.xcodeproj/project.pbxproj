@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		168FA42D2AB07333005B1C2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FA42C2AB07333005B1C2D /* AppDelegate.swift */; };
 		168FA42F2AB07333005B1C2D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FA42E2AB07333005B1C2D /* SceneDelegate.swift */; };
-		168FA4312AB07333005B1C2D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FA4302AB07333005B1C2D /* ViewController.swift */; };
+		168FA4312AB07333005B1C2D /* CharactersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FA4302AB07333005B1C2D /* CharactersListViewController.swift */; };
 		168FA4342AB07334005B1C2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 168FA4322AB07334005B1C2D /* Main.storyboard */; };
 		168FA4372AB07334005B1C2D /* MarvelCharactersDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 168FA4352AB07334005B1C2D /* MarvelCharactersDemo.xcdatamodeld */; };
 		168FA4392AB07335005B1C2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 168FA4382AB07335005B1C2D /* Assets.xcassets */; };
@@ -17,6 +17,51 @@
 		168FA4472AB07336005B1C2D /* MarvelCharactersDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FA4462AB07336005B1C2D /* MarvelCharactersDemoTests.swift */; };
 		168FA4512AB07336005B1C2D /* MarvelCharactersDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FA4502AB07336005B1C2D /* MarvelCharactersDemoUITests.swift */; };
 		168FA4532AB07336005B1C2D /* MarvelCharactersDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FA4522AB07336005B1C2D /* MarvelCharactersDemoUITestsLaunchTests.swift */; };
+		168FA46F2AB074CB005B1C2D /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FA46E2AB074CB005B1C2D /* Coordinator.swift */; };
+		168FA4712AB074DD005B1C2D /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FA4702AB074DD005B1C2D /* AppCoordinator.swift */; };
+		168FA52D2AB0CB05005B1C2D /* MarvelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FA52C2AB0CB05005B1C2D /* MarvelService.swift */; };
+		168FA52F2AB0CB10005B1C2D /* MarvelServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FA52E2AB0CB10005B1C2D /* MarvelServiceType.swift */; };
+		168FA5312AB0CB4B005B1C2D /* CharactersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FA5302AB0CB4B005B1C2D /* CharactersModel.swift */; };
+		168FA5352AB0D3B8005B1C2D /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FA5342AB0D3B8005B1C2D /* BaseResponse.swift */; };
+		168FA53A2AB0DCE9005B1C2D /* ApiBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FA5392AB0DCE9005B1C2D /* ApiBuilder.swift */; };
+		168FA53C2AB0DD0A005B1C2D /* MarvelCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FA53B2AB0DD0A005B1C2D /* MarvelCacheManager.swift */; };
+		168FA53E2AB0EC97005B1C2D /* ComicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FA53D2AB0EC97005B1C2D /* ComicModel.swift */; };
+		168FA5402AB0ED7B005B1C2D /* ThumbnailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FA53F2AB0ED7B005B1C2D /* ThumbnailModel.swift */; };
+		168FA5422AB0ED86005B1C2D /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FA5412AB0ED86005B1C2D /* ItemModel.swift */; };
+		168FA5442AB0ED8F005B1C2D /* StateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FA5432AB0ED8F005B1C2D /* StateModel.swift */; };
+		168FA5462AB0ED9D005B1C2D /* CharacterUrlModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FA5452AB0ED9D005B1C2D /* CharacterUrlModel.swift */; };
+		168FA5482AB0EE7E005B1C2D /* MarvelService+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FA5472AB0EE7E005B1C2D /* MarvelService+Ext.swift */; };
+		168FA54A2AB0F512005B1C2D /* CharactersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FA5492AB0F512005B1C2D /* CharactersListViewModel.swift */; };
+		168FA54D2AB0F67E005B1C2D /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FA54C2AB0F67E005B1C2D /* BaseViewModel.swift */; };
+		168FA54F2AB0F888005B1C2D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FA54E2AB0F888005B1C2D /* BaseViewController.swift */; };
+		168FA5532AB0FAD9005B1C2D /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FA5512AB0FAD9005B1C2D /* CharacterTableViewCell.swift */; };
+		168FA5542AB0FAD9005B1C2D /* CharacterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 168FA5522AB0FAD9005B1C2D /* CharacterTableViewCell.xib */; };
+		168FA5612AB10449005B1C2D /* NunitoSans-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 168FA5562AB10449005B1C2D /* NunitoSans-Black.ttf */; };
+		168FA5622AB10449005B1C2D /* NunitoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 168FA5572AB10449005B1C2D /* NunitoSans-Italic.ttf */; };
+		168FA5632AB10449005B1C2D /* NunitoSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 168FA5582AB10449005B1C2D /* NunitoSans-Light.ttf */; };
+		168FA5642AB10449005B1C2D /* NunitoSans-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 168FA5592AB10449005B1C2D /* NunitoSans-ExtraLightItalic.ttf */; };
+		168FA5652AB10449005B1C2D /* NunitoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 168FA55A2AB10449005B1C2D /* NunitoSans-Regular.ttf */; };
+		168FA5662AB10449005B1C2D /* NunitoSans-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 168FA55B2AB10449005B1C2D /* NunitoSans-BlackItalic.ttf */; };
+		168FA5672AB10449005B1C2D /* NunitoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 168FA55C2AB10449005B1C2D /* NunitoSans-Bold.ttf */; };
+		168FA5682AB10449005B1C2D /* NunitoSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 168FA55D2AB10449005B1C2D /* NunitoSans-ExtraBold.ttf */; };
+		168FA5692AB10449005B1C2D /* NunitoSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 168FA55E2AB10449005B1C2D /* NunitoSans-ExtraBoldItalic.ttf */; };
+		168FA56A2AB10449005B1C2D /* NunitoSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 168FA55F2AB10449005B1C2D /* NunitoSans-BoldItalic.ttf */; };
+		168FA56B2AB10449005B1C2D /* NunitoSans-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 168FA5602AB10449005B1C2D /* NunitoSans-ExtraLight.ttf */; };
+		168FA56E2AB10477005B1C2D /* MarvelConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FA56D2AB10477005B1C2D /* MarvelConfig.swift */; };
+		168FA5722AB104AB005B1C2D /* UIFont+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FA5712AB104AB005B1C2D /* UIFont+Ext.swift */; };
+		168FA5752AB10585005B1C2D /* MarvelTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FA5742AB10585005B1C2D /* MarvelTheme.swift */; };
+		168FA5772AB10599005B1C2D /* FontProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FA5762AB10599005B1C2D /* FontProtocol.swift */; };
+		168FA5792AB105B0005B1C2D /* ColorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FA5782AB105B0005B1C2D /* ColorProtocol.swift */; };
+		168FA57B2AB105DD005B1C2D /* ThemeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FA57A2AB105DD005B1C2D /* ThemeFont.swift */; };
+		168FA57E2AB1060D005B1C2D /* ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FA57D2AB1060D005B1C2D /* ThemeColor.swift */; };
+		168FA5832AB1998A005B1C2D /* CharacterListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FA5822AB1998A005B1C2D /* CharacterListCoordinator.swift */; };
+		168FA5852AB1A39A005B1C2D /* CharactersDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FA5842AB1A39A005B1C2D /* CharactersDetailsViewController.swift */; };
+		168FA5872AB1A3C7005B1C2D /* CharacterDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FA5862AB1A3C7005B1C2D /* CharacterDetailCoordinator.swift */; };
+		168FA5892AB1A425005B1C2D /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FA5882AB1A425005B1C2D /* UIViewController+Ext.swift */; };
+		168FA58B2AB1A4F2005B1C2D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FA58A2AB1A4F2005B1C2D /* Router.swift */; };
+		168FA58E2AB1A580005B1C2D /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FA58D2AB1A580005B1C2D /* NSObject.swift */; };
+		168FA5902AB1A639005B1C2D /* CharactersDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FA58F2AB1A639005B1C2D /* CharactersDetailsViewModel.swift */; };
+		5194C3D6A57104752291191E /* libPods-MarvelCharactersDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC855385E172DFE0F81BCEB5 /* libPods-MarvelCharactersDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +85,7 @@
 		168FA4292AB07333005B1C2D /* MarvelCharactersDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelCharactersDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		168FA42C2AB07333005B1C2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		168FA42E2AB07333005B1C2D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		168FA4302AB07333005B1C2D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		168FA4302AB07333005B1C2D /* CharactersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListViewController.swift; sourceTree = "<group>"; };
 		168FA4332AB07334005B1C2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		168FA4362AB07334005B1C2D /* MarvelCharactersDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MarvelCharactersDemo.xcdatamodel; sourceTree = "<group>"; };
 		168FA4382AB07335005B1C2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +96,53 @@
 		168FA44C2AB07336005B1C2D /* MarvelCharactersDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelCharactersDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		168FA4502AB07336005B1C2D /* MarvelCharactersDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCharactersDemoUITests.swift; sourceTree = "<group>"; };
 		168FA4522AB07336005B1C2D /* MarvelCharactersDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCharactersDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		168FA46E2AB074CB005B1C2D /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		168FA4702AB074DD005B1C2D /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		168FA52C2AB0CB05005B1C2D /* MarvelService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelService.swift; sourceTree = "<group>"; };
+		168FA52E2AB0CB10005B1C2D /* MarvelServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelServiceType.swift; sourceTree = "<group>"; };
+		168FA5302AB0CB4B005B1C2D /* CharactersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersModel.swift; sourceTree = "<group>"; };
+		168FA5342AB0D3B8005B1C2D /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
+		168FA5392AB0DCE9005B1C2D /* ApiBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiBuilder.swift; sourceTree = "<group>"; };
+		168FA53B2AB0DD0A005B1C2D /* MarvelCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCacheManager.swift; sourceTree = "<group>"; };
+		168FA53D2AB0EC97005B1C2D /* ComicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicModel.swift; sourceTree = "<group>"; };
+		168FA53F2AB0ED7B005B1C2D /* ThumbnailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailModel.swift; sourceTree = "<group>"; };
+		168FA5412AB0ED86005B1C2D /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		168FA5432AB0ED8F005B1C2D /* StateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateModel.swift; sourceTree = "<group>"; };
+		168FA5452AB0ED9D005B1C2D /* CharacterUrlModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterUrlModel.swift; sourceTree = "<group>"; };
+		168FA5472AB0EE7E005B1C2D /* MarvelService+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MarvelService+Ext.swift"; sourceTree = "<group>"; };
+		168FA5492AB0F512005B1C2D /* CharactersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListViewModel.swift; sourceTree = "<group>"; };
+		168FA54C2AB0F67E005B1C2D /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		168FA54E2AB0F888005B1C2D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		168FA5512AB0FAD9005B1C2D /* CharacterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewCell.swift; sourceTree = "<group>"; };
+		168FA5522AB0FAD9005B1C2D /* CharacterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterTableViewCell.xib; sourceTree = "<group>"; };
+		168FA5562AB10449005B1C2D /* NunitoSans-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-Black.ttf"; sourceTree = "<group>"; };
+		168FA5572AB10449005B1C2D /* NunitoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-Italic.ttf"; sourceTree = "<group>"; };
+		168FA5582AB10449005B1C2D /* NunitoSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-Light.ttf"; sourceTree = "<group>"; };
+		168FA5592AB10449005B1C2D /* NunitoSans-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		168FA55A2AB10449005B1C2D /* NunitoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-Regular.ttf"; sourceTree = "<group>"; };
+		168FA55B2AB10449005B1C2D /* NunitoSans-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-BlackItalic.ttf"; sourceTree = "<group>"; };
+		168FA55C2AB10449005B1C2D /* NunitoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-Bold.ttf"; sourceTree = "<group>"; };
+		168FA55D2AB10449005B1C2D /* NunitoSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		168FA55E2AB10449005B1C2D /* NunitoSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		168FA55F2AB10449005B1C2D /* NunitoSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		168FA5602AB10449005B1C2D /* NunitoSans-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-ExtraLight.ttf"; sourceTree = "<group>"; };
+		168FA56D2AB10477005B1C2D /* MarvelConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelConfig.swift; sourceTree = "<group>"; };
+		168FA5712AB104AB005B1C2D /* UIFont+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Ext.swift"; sourceTree = "<group>"; };
+		168FA5742AB10585005B1C2D /* MarvelTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelTheme.swift; sourceTree = "<group>"; };
+		168FA5762AB10599005B1C2D /* FontProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontProtocol.swift; sourceTree = "<group>"; };
+		168FA5782AB105B0005B1C2D /* ColorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorProtocol.swift; sourceTree = "<group>"; };
+		168FA57A2AB105DD005B1C2D /* ThemeFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFont.swift; sourceTree = "<group>"; };
+		168FA57D2AB1060D005B1C2D /* ThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColor.swift; sourceTree = "<group>"; };
+		168FA5822AB1998A005B1C2D /* CharacterListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListCoordinator.swift; sourceTree = "<group>"; };
+		168FA5842AB1A39A005B1C2D /* CharactersDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersDetailsViewController.swift; sourceTree = "<group>"; };
+		168FA5862AB1A3C7005B1C2D /* CharacterDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailCoordinator.swift; sourceTree = "<group>"; };
+		168FA5882AB1A425005B1C2D /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		168FA58A2AB1A4F2005B1C2D /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		168FA58D2AB1A580005B1C2D /* NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
+		168FA58F2AB1A639005B1C2D /* CharactersDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersDetailsViewModel.swift; sourceTree = "<group>"; };
+		84790917D35693616C6F6D6B /* Pods-MarvelCharactersDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelCharactersDemo.debug.xcconfig"; path = "Target Support Files/Pods-MarvelCharactersDemo/Pods-MarvelCharactersDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		BC855385E172DFE0F81BCEB5 /* libPods-MarvelCharactersDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MarvelCharactersDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C371DF2D62A5F8C46C5F0007 /* Pods-MarvelCharactersDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelCharactersDemo.release.xcconfig"; path = "Target Support Files/Pods-MarvelCharactersDemo/Pods-MarvelCharactersDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +150,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5194C3D6A57104752291191E /* libPods-MarvelCharactersDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +178,8 @@
 				168FA4452AB07336005B1C2D /* MarvelCharactersDemoTests */,
 				168FA44F2AB07336005B1C2D /* MarvelCharactersDemoUITests */,
 				168FA42A2AB07333005B1C2D /* Products */,
+				E41845C9C4D046765FE3A94A /* Pods */,
+				1BD07030EC52466D4D81267C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,14 +196,14 @@
 		168FA42B2AB07333005B1C2D /* MarvelCharactersDemo */ = {
 			isa = PBXGroup;
 			children = (
-				168FA42C2AB07333005B1C2D /* AppDelegate.swift */,
-				168FA42E2AB07333005B1C2D /* SceneDelegate.swift */,
-				168FA4302AB07333005B1C2D /* ViewController.swift */,
-				168FA4322AB07334005B1C2D /* Main.storyboard */,
-				168FA4382AB07335005B1C2D /* Assets.xcassets */,
-				168FA43A2AB07335005B1C2D /* LaunchScreen.storyboard */,
-				168FA43D2AB07335005B1C2D /* Info.plist */,
-				168FA4352AB07334005B1C2D /* MarvelCharactersDemo.xcdatamodeld */,
+				168FA54B2AB0F670005B1C2D /* Base */,
+				168FA4612AB0739D005B1C2D /* Features */,
+				168FA56C2AB10466005B1C2D /* Instance */,
+				168FA46D2AB07412005B1C2D /* Supporting Files */,
+				168FA45F2AB07370005B1C2D /* Resources */,
+				168FA56F2AB10499005B1C2D /* Extensions */,
+				168FA5552AB10429005B1C2D /* Fonts */,
+				168FA5732AB1056D005B1C2D /* Theme */,
 			);
 			path = MarvelCharactersDemo;
 			sourceTree = "<group>";
@@ -130,6 +225,275 @@
 			path = MarvelCharactersDemoUITests;
 			sourceTree = "<group>";
 		};
+		168FA45F2AB07370005B1C2D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				168FA4352AB07334005B1C2D /* MarvelCharactersDemo.xcdatamodeld */,
+				168FA43D2AB07335005B1C2D /* Info.plist */,
+				168FA4382AB07335005B1C2D /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		168FA4612AB0739D005B1C2D /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				168FA57F2AB10877005B1C2D /* Protocols */,
+				168FA5382AB0DCDF005B1C2D /* Helpers */,
+				168FA5332AB0D3AF005B1C2D /* Response */,
+				168FA4662AB0739D005B1C2D /* Model */,
+				168FA4692AB0739D005B1C2D /* Controllers */,
+				168FA4672AB0739D005B1C2D /* View */,
+				168FA4622AB0739D005B1C2D /* ViewModel */,
+				168FA4632AB0739D005B1C2D /* Coordinator */,
+				168FA4642AB0739D005B1C2D /* Enums */,
+				168FA4652AB0739D005B1C2D /* ServiceType */,
+				168FA4682AB0739D005B1C2D /* Service */,
+				168FA46A2AB0739D005B1C2D /* Assets */,
+				168FA46B2AB0739D005B1C2D /* Router */,
+				168FA46C2AB073BE005B1C2D /* Storyboard */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		168FA4622AB0739D005B1C2D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				168FA5492AB0F512005B1C2D /* CharactersListViewModel.swift */,
+				168FA58F2AB1A639005B1C2D /* CharactersDetailsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		168FA4632AB0739D005B1C2D /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				168FA5822AB1998A005B1C2D /* CharacterListCoordinator.swift */,
+				168FA5862AB1A3C7005B1C2D /* CharacterDetailCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		168FA4642AB0739D005B1C2D /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		168FA4652AB0739D005B1C2D /* ServiceType */ = {
+			isa = PBXGroup;
+			children = (
+				168FA52E2AB0CB10005B1C2D /* MarvelServiceType.swift */,
+			);
+			path = ServiceType;
+			sourceTree = "<group>";
+		};
+		168FA4662AB0739D005B1C2D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				168FA5302AB0CB4B005B1C2D /* CharactersModel.swift */,
+				168FA53D2AB0EC97005B1C2D /* ComicModel.swift */,
+				168FA53F2AB0ED7B005B1C2D /* ThumbnailModel.swift */,
+				168FA5412AB0ED86005B1C2D /* ItemModel.swift */,
+				168FA5432AB0ED8F005B1C2D /* StateModel.swift */,
+				168FA5452AB0ED9D005B1C2D /* CharacterUrlModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		168FA4672AB0739D005B1C2D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				168FA5502AB0FA83005B1C2D /* CharacterTableViewCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		168FA4682AB0739D005B1C2D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				168FA52C2AB0CB05005B1C2D /* MarvelService.swift */,
+				168FA5472AB0EE7E005B1C2D /* MarvelService+Ext.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		168FA4692AB0739D005B1C2D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				168FA4302AB07333005B1C2D /* CharactersListViewController.swift */,
+				168FA5842AB1A39A005B1C2D /* CharactersDetailsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		168FA46A2AB0739D005B1C2D /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		168FA46B2AB0739D005B1C2D /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				168FA58A2AB1A4F2005B1C2D /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		168FA46C2AB073BE005B1C2D /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				168FA4322AB07334005B1C2D /* Main.storyboard */,
+				168FA43A2AB07335005B1C2D /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		168FA46D2AB07412005B1C2D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				168FA42C2AB07333005B1C2D /* AppDelegate.swift */,
+				168FA42E2AB07333005B1C2D /* SceneDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		168FA5332AB0D3AF005B1C2D /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				168FA5342AB0D3B8005B1C2D /* BaseResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		168FA5382AB0DCDF005B1C2D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				168FA5392AB0DCE9005B1C2D /* ApiBuilder.swift */,
+				168FA53B2AB0DD0A005B1C2D /* MarvelCacheManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		168FA54B2AB0F670005B1C2D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				168FA46E2AB074CB005B1C2D /* Coordinator.swift */,
+				168FA4702AB074DD005B1C2D /* AppCoordinator.swift */,
+				168FA54C2AB0F67E005B1C2D /* BaseViewModel.swift */,
+				168FA54E2AB0F888005B1C2D /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		168FA5502AB0FA83005B1C2D /* CharacterTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				168FA5512AB0FAD9005B1C2D /* CharacterTableViewCell.swift */,
+				168FA5522AB0FAD9005B1C2D /* CharacterTableViewCell.xib */,
+			);
+			path = CharacterTableViewCell;
+			sourceTree = "<group>";
+		};
+		168FA5552AB10429005B1C2D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				168FA5562AB10449005B1C2D /* NunitoSans-Black.ttf */,
+				168FA55B2AB10449005B1C2D /* NunitoSans-BlackItalic.ttf */,
+				168FA55C2AB10449005B1C2D /* NunitoSans-Bold.ttf */,
+				168FA55F2AB10449005B1C2D /* NunitoSans-BoldItalic.ttf */,
+				168FA55D2AB10449005B1C2D /* NunitoSans-ExtraBold.ttf */,
+				168FA55E2AB10449005B1C2D /* NunitoSans-ExtraBoldItalic.ttf */,
+				168FA5602AB10449005B1C2D /* NunitoSans-ExtraLight.ttf */,
+				168FA5592AB10449005B1C2D /* NunitoSans-ExtraLightItalic.ttf */,
+				168FA5572AB10449005B1C2D /* NunitoSans-Italic.ttf */,
+				168FA5582AB10449005B1C2D /* NunitoSans-Light.ttf */,
+				168FA55A2AB10449005B1C2D /* NunitoSans-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		168FA56C2AB10466005B1C2D /* Instance */ = {
+			isa = PBXGroup;
+			children = (
+				168FA56D2AB10477005B1C2D /* MarvelConfig.swift */,
+			);
+			path = Instance;
+			sourceTree = "<group>";
+		};
+		168FA56F2AB10499005B1C2D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				168FA58C2AB1A579005B1C2D /* Core */,
+				168FA5702AB104A0005B1C2D /* UI */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		168FA5702AB104A0005B1C2D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				168FA5712AB104AB005B1C2D /* UIFont+Ext.swift */,
+				168FA5882AB1A425005B1C2D /* UIViewController+Ext.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		168FA5732AB1056D005B1C2D /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				168FA57C2AB105FA005B1C2D /* ThemeComponent */,
+				168FA5742AB10585005B1C2D /* MarvelTheme.swift */,
+				168FA5762AB10599005B1C2D /* FontProtocol.swift */,
+				168FA5782AB105B0005B1C2D /* ColorProtocol.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		168FA57C2AB105FA005B1C2D /* ThemeComponent */ = {
+			isa = PBXGroup;
+			children = (
+				168FA57A2AB105DD005B1C2D /* ThemeFont.swift */,
+				168FA57D2AB1060D005B1C2D /* ThemeColor.swift */,
+			);
+			path = ThemeComponent;
+			sourceTree = "<group>";
+		};
+		168FA57F2AB10877005B1C2D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		168FA58C2AB1A579005B1C2D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				168FA58D2AB1A580005B1C2D /* NSObject.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		1BD07030EC52466D4D81267C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC855385E172DFE0F81BCEB5 /* libPods-MarvelCharactersDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E41845C9C4D046765FE3A94A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				84790917D35693616C6F6D6B /* Pods-MarvelCharactersDemo.debug.xcconfig */,
+				C371DF2D62A5F8C46C5F0007 /* Pods-MarvelCharactersDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,6 +501,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 168FA4562AB07336005B1C2D /* Build configuration list for PBXNativeTarget "MarvelCharactersDemo" */;
 			buildPhases = (
+				38601DC00F544B9E36680C86 /* [CP] Check Pods Manifest.lock */,
 				168FA4252AB07333005B1C2D /* Sources */,
 				168FA4262AB07333005B1C2D /* Frameworks */,
 				168FA4272AB07333005B1C2D /* Resources */,
@@ -234,9 +599,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				168FA5622AB10449005B1C2D /* NunitoSans-Italic.ttf in Resources */,
 				168FA43C2AB07335005B1C2D /* LaunchScreen.storyboard in Resources */,
+				168FA5632AB10449005B1C2D /* NunitoSans-Light.ttf in Resources */,
+				168FA5692AB10449005B1C2D /* NunitoSans-ExtraBoldItalic.ttf in Resources */,
 				168FA4392AB07335005B1C2D /* Assets.xcassets in Resources */,
+				168FA5682AB10449005B1C2D /* NunitoSans-ExtraBold.ttf in Resources */,
+				168FA5642AB10449005B1C2D /* NunitoSans-ExtraLightItalic.ttf in Resources */,
 				168FA4342AB07334005B1C2D /* Main.storyboard in Resources */,
+				168FA5542AB0FAD9005B1C2D /* CharacterTableViewCell.xib in Resources */,
+				168FA5672AB10449005B1C2D /* NunitoSans-Bold.ttf in Resources */,
+				168FA5652AB10449005B1C2D /* NunitoSans-Regular.ttf in Resources */,
+				168FA56B2AB10449005B1C2D /* NunitoSans-ExtraLight.ttf in Resources */,
+				168FA56A2AB10449005B1C2D /* NunitoSans-BoldItalic.ttf in Resources */,
+				168FA5662AB10449005B1C2D /* NunitoSans-BlackItalic.ttf in Resources */,
+				168FA5612AB10449005B1C2D /* NunitoSans-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,14 +633,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		38601DC00F544B9E36680C86 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MarvelCharactersDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		168FA4252AB07333005B1C2D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				168FA4312AB07333005B1C2D /* ViewController.swift in Sources */,
+				168FA5422AB0ED86005B1C2D /* ItemModel.swift in Sources */,
+				168FA54D2AB0F67E005B1C2D /* BaseViewModel.swift in Sources */,
+				168FA5892AB1A425005B1C2D /* UIViewController+Ext.swift in Sources */,
+				168FA5752AB10585005B1C2D /* MarvelTheme.swift in Sources */,
+				168FA5402AB0ED7B005B1C2D /* ThumbnailModel.swift in Sources */,
+				168FA5772AB10599005B1C2D /* FontProtocol.swift in Sources */,
+				168FA5852AB1A39A005B1C2D /* CharactersDetailsViewController.swift in Sources */,
+				168FA53A2AB0DCE9005B1C2D /* ApiBuilder.swift in Sources */,
+				168FA5312AB0CB4B005B1C2D /* CharactersModel.swift in Sources */,
+				168FA5832AB1998A005B1C2D /* CharacterListCoordinator.swift in Sources */,
+				168FA5532AB0FAD9005B1C2D /* CharacterTableViewCell.swift in Sources */,
+				168FA54F2AB0F888005B1C2D /* BaseViewController.swift in Sources */,
+				168FA54A2AB0F512005B1C2D /* CharactersListViewModel.swift in Sources */,
+				168FA5462AB0ED9D005B1C2D /* CharacterUrlModel.swift in Sources */,
+				168FA57E2AB1060D005B1C2D /* ThemeColor.swift in Sources */,
+				168FA4712AB074DD005B1C2D /* AppCoordinator.swift in Sources */,
+				168FA4312AB07333005B1C2D /* CharactersListViewController.swift in Sources */,
+				168FA58E2AB1A580005B1C2D /* NSObject.swift in Sources */,
+				168FA58B2AB1A4F2005B1C2D /* Router.swift in Sources */,
 				168FA42D2AB07333005B1C2D /* AppDelegate.swift in Sources */,
+				168FA5722AB104AB005B1C2D /* UIFont+Ext.swift in Sources */,
+				168FA5482AB0EE7E005B1C2D /* MarvelService+Ext.swift in Sources */,
+				168FA53C2AB0DD0A005B1C2D /* MarvelCacheManager.swift in Sources */,
+				168FA52D2AB0CB05005B1C2D /* MarvelService.swift in Sources */,
+				168FA5352AB0D3B8005B1C2D /* BaseResponse.swift in Sources */,
+				168FA56E2AB10477005B1C2D /* MarvelConfig.swift in Sources */,
+				168FA52F2AB0CB10005B1C2D /* MarvelServiceType.swift in Sources */,
+				168FA5872AB1A3C7005B1C2D /* CharacterDetailCoordinator.swift in Sources */,
+				168FA53E2AB0EC97005B1C2D /* ComicModel.swift in Sources */,
+				168FA46F2AB074CB005B1C2D /* Coordinator.swift in Sources */,
+				168FA5792AB105B0005B1C2D /* ColorProtocol.swift in Sources */,
+				168FA57B2AB105DD005B1C2D /* ThemeFont.swift in Sources */,
+				168FA5442AB0ED8F005B1C2D /* StateModel.swift in Sources */,
 				168FA42F2AB07333005B1C2D /* SceneDelegate.swift in Sources */,
+				168FA5902AB1A639005B1C2D /* CharactersDetailsViewModel.swift in Sources */,
 				168FA4372AB07334005B1C2D /* MarvelCharactersDemo.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,6 +870,7 @@
 		};
 		168FA4572AB07336005B1C2D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84790917D35693616C6F6D6B /* Pods-MarvelCharactersDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -443,7 +878,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2NC8D4NC9Y;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MarvelCharactersDemo/Info.plist;
+				INFOPLIST_FILE = MarvelCharactersDemo/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -464,6 +899,7 @@
 		};
 		168FA4582AB07336005B1C2D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C371DF2D62A5F8C46C5F0007 /* Pods-MarvelCharactersDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -471,7 +907,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2NC8D4NC9Y;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MarvelCharactersDemo/Info.plist;
+				INFOPLIST_FILE = MarvelCharactersDemo/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

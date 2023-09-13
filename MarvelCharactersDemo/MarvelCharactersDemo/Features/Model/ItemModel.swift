@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct ItemModel: Codable {
+    var resourceURI: String?
+    var name: String?
+    var type: String?
+}
