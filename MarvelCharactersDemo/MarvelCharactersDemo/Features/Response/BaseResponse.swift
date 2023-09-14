@@ -7,11 +7,16 @@
 
 import Foundation
 
-struct BaseResponse<T: Codable>: Codable {
-    var code: Int?
-    var data: T?
-}
+//struct BaseResponse<T: Codable>: Codable {
+//    var code: Int?
+//    var data: T?
+//}
 
+/*
+since our app just base on list so i created
+BaseListResponse, later on if we have apis not
+not for listing we can update the requester and the response
+ */
 struct BaseListResponse<T: Codable>: Codable {
     var code: Int?
     var data: ListResponse<T>?

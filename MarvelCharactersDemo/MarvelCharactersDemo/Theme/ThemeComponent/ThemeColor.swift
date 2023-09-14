@@ -16,4 +16,6 @@ public class ThemeColor: ColorProtocol {
     public var secondaryColor = #colorLiteral(red: 0.05882352941, green: 0.431372549, blue: 1, alpha: 1)
     ///Color with Hex:  #9AA1A9
     public var tertiaryColor = #colorLiteral(red: 0.6039215686, green: 0.631372549, blue: 0.662745098, alpha: 1)
+    ///Color with Hex:  #FFFFFF
+    public var whiteColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
 }

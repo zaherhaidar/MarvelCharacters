@@ -12,5 +12,5 @@ import UIKit
     @objc optional var primaryColor: UIColor { get set }
     @objc optional var secondaryColor: UIColor { get set }
     @objc optional var tertiaryColor: UIColor { get set }
-    
+    @objc optional var whiteColor: UIColor { get set }
 }

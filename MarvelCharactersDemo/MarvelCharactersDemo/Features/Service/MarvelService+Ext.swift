@@ -10,47 +10,49 @@ import Combine
 
 extension MarvelService: MarvelServiceType {
     
-    func getCharacters() -> AnyPublisher<[CharacterModel], Error> {
+    func getCharacters(params: [String: String]?, withCache: Bool) -> AnyPublisher<BaseListResponse<CharacterModel>, Error> {
         
         let cachedKey = "cachedCharacters"
        
 
         // Check if data is available in cache
         if let cachedCharacters = MarvelCacheManager.shared.loadFromCache([CharacterModel].self, forKey: cachedKey) {
-            let cachedPublisher = Just(cachedCharacters)
+            let cachedBaseListResponse = BaseListResponse(code: 200, data: ListResponse(results: cachedCharacters))
+            let cachedPublisher = Just(cachedBaseListResponse)
                 .setFailureType(to: Error.self)
                 .eraseToAnyPublisher()
 
             // Fetch data from the API in parallel with the cached data
-            let apiPublisher = requestApiList(CharacterModel.self, endPoint: "characters", cachedKey: cachedKey)
+            let apiPublisher = requestApiList(CharacterModel.self, endPoint: "characters", params: params, withCache: withCache, cachedKey: cachedKey)
 
             // Merge the cached data and API data
             return Publishers.Merge(cachedPublisher, apiPublisher)
                 .eraseToAnyPublisher()
         } else {
             // If there's no cached data, fetch data from the API only
-            return requestApiList(CharacterModel.self, endPoint: "characters", cachedKey: cachedKey)
+            return requestApiList(CharacterModel.self, endPoint: "characters", params: params, withCache: withCache, cachedKey: cachedKey)
         }
     }
     
-    func getComics(characterID: Int) -> AnyPublisher<[ComicModel], Error> {
-        let cachedKey = "cachedComic\(characterID)"
-
+    func getCharacterDetails(endpoint: String, characterID: Int, params: [String: String]?, withCache: Bool) -> AnyPublisher<BaseListResponse<CharacterDetailModel>, Error> {
+        let cachedKey = "cached\(endpoint)-\(characterID)"
+        let endPoint = "characters/\(characterID)/\(endpoint)"
         // Check if data is available in cache
-        if let cachedCharacters = MarvelCacheManager.shared.loadFromCache([ComicModel].self, forKey: cachedKey) {
-            let cachedPublisher = Just(cachedCharacters)
+        if let cachedCharacters = MarvelCacheManager.shared.loadFromCache([CharacterDetailModel].self, forKey: cachedKey) {
+            let cachedBaseListResponse = BaseListResponse(code: 200, data: ListResponse(results: cachedCharacters))
+            let cachedPublisher = Just(cachedBaseListResponse)
                 .setFailureType(to: Error.self)
                 .eraseToAnyPublisher()
 
             // Fetch data from the API in parallel with the cached data
-            let apiPublisher = requestApiList(ComicModel.self, endPoint: "characters/\(characterID)/comics", cachedKey: cachedKey)
+            let apiPublisher = requestApiList(CharacterDetailModel.self, endPoint: endPoint, params: params, withCache: withCache, cachedKey: cachedKey)
 
             // Merge the cached data and API data
             return Publishers.Merge(cachedPublisher, apiPublisher)
                 .eraseToAnyPublisher()
         } else {
             // If there's no cached data, fetch data from the API only
-            return requestApiList(ComicModel.self, endPoint: "characters/\(characterID)/comics", cachedKey: cachedKey)
+            return requestApiList(CharacterDetailModel.self, endPoint: endPoint, params: params, withCache: withCache, cachedKey: cachedKey)
         }
     }
 }

@@ -1,5 +1,5 @@
 //
-//  ComicModel.swift
+//  CharacterDetailModel.swift
 //  MarvelCharactersDemo
 //
 //  Created by zaher haidar on 12/09/2023.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ComicModel: Codable {
+struct CharacterDetailModel: Codable {
     var id: Int?
     var digitalId: Int?
     var title: String?
@@ -19,4 +19,5 @@ struct ComicModel: Codable {
     var upc: String?
     var diamondCode: String?
     var resourceURI: String?
+    var thumbnail: ThumbnailModel?
 }

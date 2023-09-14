@@ -9,6 +9,6 @@ import Foundation
 import Combine
 
 protocol MarvelServiceType {
-    func getCharacters() -> AnyPublisher<[CharacterModel], Error>
-    func getComics(characterID: Int) -> AnyPublisher<[ComicModel], Error>
+    func getCharacters(params: [String: String]?, withCache: Bool) -> AnyPublisher<BaseListResponse<CharacterModel>, Error>
+    func getCharacterDetails(endpoint: String, characterID: Int, params: [String: String]?, withCache: Bool) -> AnyPublisher<BaseListResponse<CharacterDetailModel>, Error>
 }
