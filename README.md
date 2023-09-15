@@ -25,4 +25,5 @@ This app includes the following:
 - Class
 - Weak
 - Kingfisher pod for image
+- Unit Testing
 - etc
