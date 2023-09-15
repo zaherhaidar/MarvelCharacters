@@ -17,6 +17,7 @@ This app includes the following:
 - ViewModel
 - URLSession
 - Coordinator
+- Shimmering
 - Extensions
 - Multithreading
 - Delegates
