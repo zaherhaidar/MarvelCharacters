@@ -12,12 +12,14 @@ class CharacterTableViewCell: UITableViewCell {
     @IBOutlet var mainView: UIView!
     @IBOutlet var characterImageView: UIImageView!
     @IBOutlet var characterNameLabel: UILabel!
-
+    @IBOutlet weak var bottomView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         mainView.layer.cornerRadius = 20
-        let style = (MarvelTheme.shared.fontProtocol?.bodyXB14, MarvelTheme.shared.colorProtocol?.whiteColor)
+        bottomView.backgroundColor = MarvelTheme.shared.colorProtocol?.tertiaryColor
+        let style = (MarvelTheme.shared.fontProtocol?.bodyXB14, MarvelTheme.shared.colorProtocol?.secondaryColor)
         characterNameLabel.customize(style: style)
     }
 

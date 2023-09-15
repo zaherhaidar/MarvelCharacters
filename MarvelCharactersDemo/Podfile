@@ -1,8 +1,15 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'MarvelCharactersDemo' do
-
-pod 'Kingfisher'
-
+def common_pods
+  pod 'Kingfisher'
 end
+
+target 'MarvelCharactersDemo' do
+  common_pods
+end
+
+target 'MarvelCharactersDemoTests' do
+  common_pods
+end
+

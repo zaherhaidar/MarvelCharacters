@@ -83,7 +83,7 @@ class HeaderView: BaseView {
     
     func setupHeaderView(leftTitle: String = "",
                          leftIcon: String = "arrow_back",
-                         leftColor: UIColor = MarvelTheme.shared.colorProtocol?.whiteColor ?? .black,
+                         leftColor: UIColor = MarvelTheme.shared.colorProtocol?.secondaryColor ?? .white,
                          titleImage: String = "",
                          titleLabel: String = "",
                          titleColor: UIColor = MarvelTheme.shared.colorProtocol?.primaryColor ?? .black,
@@ -104,7 +104,7 @@ class HeaderView: BaseView {
         
         self.titleLabel.isHidden = titleLabel.isEmpty
         self.titleLabel.text = titleLabel
-        self.titleLabel.customize(style: (MarvelTheme.shared.fontProtocol?.bodyXB18, MarvelTheme.shared.colorProtocol?.whiteColor ?? .white))
+        self.titleLabel.customize(style: (MarvelTheme.shared.fontProtocol?.bodyXB18, MarvelTheme.shared.colorProtocol?.secondaryColor ?? .white))
         self.titleImage.isHidden = titleImage.isEmpty
         
         if !titleImage.isEmpty {

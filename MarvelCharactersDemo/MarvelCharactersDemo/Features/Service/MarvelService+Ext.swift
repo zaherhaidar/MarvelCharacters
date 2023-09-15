@@ -38,7 +38,7 @@ extension MarvelService: MarvelServiceType {
         let cachedKey = "cached\(endpoint)-\(characterID)"
         let endPoint = "characters/\(characterID)/\(endpoint)"
         // Check if data is available in cache
-        if let cachedCharacters = MarvelCacheManager.shared.loadFromCache([CharacterDetailModel].self, forKey: cachedKey) {
+        if withCache, let cachedCharacters = MarvelCacheManager.shared.loadFromCache([CharacterDetailModel].self, forKey: cachedKey) {
             let cachedBaseListResponse = BaseListResponse(code: 200, data: ListResponse(results: cachedCharacters))
             let cachedPublisher = Just(cachedBaseListResponse)
                 .setFailureType(to: Error.self)

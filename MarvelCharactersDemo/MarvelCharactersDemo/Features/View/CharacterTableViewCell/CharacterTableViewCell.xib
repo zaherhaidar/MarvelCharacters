@@ -33,7 +33,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <color key="backgroundColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="MmT-6c-aPa" firstAttribute="top" secondItem="c8d-EA-UdN" secondAttribute="top" constant="8" id="DcS-F2-aZ6"/>
                                     <constraint firstItem="MmT-6c-aPa" firstAttribute="centerX" secondItem="c8d-EA-UdN" secondAttribute="centerX" id="mIX-T8-Z4J"/>
@@ -64,6 +64,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="bottomView" destination="c8d-EA-UdN" id="kXZ-uf-Pdy"/>
                 <outlet property="characterImageView" destination="X6x-Ks-IBf" id="I8z-es-47Y"/>
                 <outlet property="characterNameLabel" destination="MmT-6c-aPa" id="Pt4-PU-DLG"/>
                 <outlet property="mainView" destination="WjH-FS-cka" id="sQx-yE-yT6"/>
@@ -74,9 +75,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

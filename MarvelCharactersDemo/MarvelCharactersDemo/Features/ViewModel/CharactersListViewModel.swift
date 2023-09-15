@@ -11,7 +11,7 @@ import Foundation
 class CharactersListViewModel: BaseViewModel, BaseViewModelInputMethods {
 
     var startCoordinator: CharacterListCoordinator?
-    private var characters: [CharacterModel] = []
+    var characters: [CharacterModel] = []
     var isPagination: Bool = false
     var totalDataCount: Int = 0
     var pageIndex: Int = 0

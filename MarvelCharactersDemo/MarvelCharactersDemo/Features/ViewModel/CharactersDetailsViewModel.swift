@@ -59,7 +59,7 @@ class CharactersDetailsViewModel: BaseViewModel, BaseViewModelInputMethods {
                 self?.outputStatus?.send(.fetchDataResponse(response: nil, error: error, apiName: nil))
             }
         } receiveValue: { [weak self] details in
-            let arrDetails = details.data?.results ?? []
+            let arrDetails = details.data?.results?.get(first: 3) ?? []
             let rowData = arrDetails.map { obj in
                 RowDataModel(thumbnail: obj.thumbnail, name: obj.title)
             }

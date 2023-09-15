@@ -19,7 +19,8 @@ class CharacterDetailCollectionViewCell: UICollectionViewCell {
         self.mainView.layer.cornerRadius = 12
         self.iconImageView.applyTopCornerRadiusIfNeeded(10)
         self.bottomView.applyBottomCornerRadiusIfNeeded(10)
-        let style = (MarvelTheme.shared.fontProtocol?.bodyXB10, MarvelTheme.shared.colorProtocol?.whiteColor)
+        bottomView.backgroundColor = MarvelTheme.shared.colorProtocol?.tertiaryColor
+        let style = (MarvelTheme.shared.fontProtocol?.bodyXB10, MarvelTheme.shared.colorProtocol?.secondaryColor)
         nameLabel.customize(style: style)
     }
     

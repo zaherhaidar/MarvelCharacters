@@ -28,10 +28,29 @@ class CharactersDetailsViewController: BaseViewController {
         setupInterface()
         setupTableView()
         viewModel.characterID = character?.id ?? -1
-        fetchData(apiName: ApiName.comics)
-        fetchData(apiName: ApiName.series)
-        fetchData(apiName: ApiName.events)
-        fetchData(apiName: ApiName.stories)
+        
+        let dispatchGroup = DispatchGroup()
+
+        let concurrentQueue = DispatchQueue(label: "characterDetails.concurrentQueue", attributes: .concurrent)
+
+        concurrentQueue.async(group: dispatchGroup) {
+            self.fetchData(apiName: ApiName.comics)
+        }
+
+        concurrentQueue.async(group: dispatchGroup) {
+            self.fetchData(apiName: ApiName.series)
+        }
+
+        concurrentQueue.async(group: dispatchGroup) {
+            self.fetchData(apiName: ApiName.events)
+        }
+        
+        concurrentQueue.async(group: dispatchGroup) {
+            self.fetchData(apiName: ApiName.stories)
+        }
+        
+        dispatchGroup.wait()
+
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -47,8 +66,8 @@ class CharactersDetailsViewController: BaseViewController {
     
     private func setupInterface() {
         titleLabel.text = character?.name
-        titleLabel.customize(style: (MarvelTheme.shared.fontProtocol?.bodyXB16, MarvelTheme.shared.colorProtocol?.whiteColor))
-        detailLabel.customize(style: (MarvelTheme.shared.fontProtocol?.bodyM16, MarvelTheme.shared.colorProtocol?.whiteColor))
+        titleLabel.customize(style: (MarvelTheme.shared.fontProtocol?.bodyXB16, MarvelTheme.shared.colorProtocol?.secondaryColor))
+        detailLabel.customize(style: (MarvelTheme.shared.fontProtocol?.bodyM16, MarvelTheme.shared.colorProtocol?.secondaryColor))
         detailLabel.text = character?.description
         if let urlSafe = URL(string: "\(character?.thumbnail?.path ?? "").\(character?.thumbnail?.ext ?? "")") {
             characterImageView.kf.setImage(with: urlSafe)
@@ -71,12 +90,14 @@ class CharactersDetailsViewController: BaseViewController {
         } else {
             if let rowData = response as? [RowDataModel], rowData.count > 0, let apiName = apiName as? ApiName {
                 let section = viewModel.getSectionIndex(with: apiName)
-                if section != -1 {
-                    self.viewModel.tableViewData[section].rowData = rowData
-                    self.tableView.reloadRows(at: [IndexPath(row: 0, section: section)], with: .automatic)
-                } else {
-                    self.viewModel.tableViewData.append(SectionModel(name: apiName.rawValue, rowData: rowData))
-                    self.tableView.reloadData()
+                DispatchQueue.main.async {
+                    if section != -1 {
+                        self.viewModel.tableViewData[section].rowData = rowData
+                        self.tableView.reloadRows(at: [IndexPath(row: 0, section: section)], with: .automatic)
+                    } else {
+                        self.viewModel.tableViewData.append(SectionModel(name: apiName.rawValue, rowData: rowData))
+                        self.tableView.reloadData()
+                    }
                 }
             }
         }
@@ -98,7 +119,7 @@ extension CharactersDetailsViewController: UITableViewDelegate, UITableViewDataS
 
         let label = PaddingLabel(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 25))
         label.text = sectionItem
-        let style = (MarvelTheme.shared.fontProtocol?.bodyXB17, MarvelTheme.shared.colorProtocol?.whiteColor)
+        let style = (MarvelTheme.shared.fontProtocol?.bodyXB17, MarvelTheme.shared.colorProtocol?.secondaryColor)
         label.customize(style: style)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.padding(8, 8, 0, 0)
